@@ -1,0 +1,103 @@
+/* css/styleku.css - styling eksternal untuk burung.html */
+
+body {
+    background-color: #f5f5dc;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Header: judul + kutipan */
+header {
+    background-color: burlywood;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+header h1 {
+    color: blue;
+    font-size: 1.5rem;
+    margin: 20px 0 15px;
+}
+
+blockquote {
+    background-color: gold;
+    border: 1px dotted #333;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    padding: 4px 8px;
+    max-width: 95%;
+}
+
+/* Navigasi */
+nav {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 12px 0;
+}
+
+nav a {
+    color: #1a237e;
+    margin: 0 3px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* Gambar */
+.gambar {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.gambar img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    vertical-align: top;
+}
+
+/* Isi */
+main {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+main p {
+    margin: 0 0 10px;
+}
+
+/* Huruf pertama besar (drop cap) */
+.pembuka::first-letter {
+    color: blue;
+    font-size: 2.8rem;
+    float: left;
+    line-height: 1;
+    margin-right: 2px;
+}
+
+main h3 {
+    font-size: 0.85rem;
+    margin: 12px 0 0;
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555;
+}
+
+/* Layar lebih lebar */
+@media (min-width: 600px) {
+    body { max-width: 800px; margin: 0 auto; }
+    header h1 { font-size: 2rem; }
+    main, nav, blockquote { font-size: 0.9rem; }
+    .gambar img { width: 160px; height: 160px; }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alpukat Buah Nikmat Kaya Manfaat</title>
+    <style>
+        /* a. Setting background dan font halaman web */
+        body {
+            background-color: lightblue;
+            font-family: 'Lucida Sans', Verdana, sans-serif;
+        }
+
+        /* b. Setting selector paragraph dan heading 1 */
+        h1 {
+            text-align: center;
+            color: blueviolet;
+        }
+        p {
+            text-align: justify;
+            width: fit-content;
+        }
+
+        /* c. Class "center" agar gambar berada di tengah */
+        .center {
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* d. Class "foto": background hitam, ukuran gambar 23% */
+        .foto {
+            background-color: black;
+            text-align: center;
+            padding: 5px 0;
+        }
+        .foto img {
+            width: 23%;
+        }
+
+        /* e. Class "cod" dan paragraph di dalamnya */
+        .cod {
+            margin: auto;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cod p {
+            background-color: aqua;
+            border: 1px dotted red;
+            text-align: center;
+            font-weight: bold;
+            color: blue;
+            width: auto;
+        }
+
+        /* f. Desain penawaran khusus */
+        .promo { text-align: center; }
+        .promo h1.merah { color: red; }
+        .promo p {
+            width: auto;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 6px 0;
+        }
+        .promo .coret { color: red; text-decoration: line-through; }
+        .promo .harga-baru { font-size: 1.4rem; }
+        .promo .cod p { margin: 15px auto; }
+        .promo button {
+            background-color: gold;
+            border: 1px solid orange;
+            padding: 4px 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        /* Modifikasi 1: highlight teks tebal dengan text styling CSS */
+        b, strong {
+            background-color: yellow;
+            color: #222;
+            padding: 0 3px;
+        }
+
+        /* Khasiat alpukat */
+        .khasiat {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: stretch;
+            margin: 25px 0;
+        }
+        .khasiat .daftar { flex: 1; min-width: 260px; }
+        .khasiat .daftar h3 { margin-top: 0; }
+        .khasiat .daftar ol { padding-left: 20px; font-size: 0.9rem; line-height: 1.5; }
+        .vitamin {
+            flex: 1.5;
+            min-width: 280px;
+            background-color: #8a6d2f;
+            color: #fff;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            font-size: 0.85rem;
+        }
+        .vitamin h4 { margin: 0 0 4px; color: #ffd54f; }
+        .vitamin b, .vitamin strong { background: none; color: #fff; }
+
+        /* Modifikasi 2: tabel dengan setiap baris beda warna */
+        table.harga {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 25px;
+            background-color: #fff;
+        }
+        table.harga th {
+            background-color: #5b9bd5;
+            color: #fff;
+            text-align: left;
+            padding: 6px 10px;
+        }
+        table.harga td {
+            padding: 6px 10px;
+            border: 1px solid #9fc5e8;
+        }
+        table.harga tr:nth-child(odd) td { background-color: #dce6f2; }
+        table.harga tr:nth-child(even) td { background-color: #eef3fa; }
+        table.harga td:first-child { font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Alpukat Buah Nikmat Kaya Manfaat</h1>
+
+    <!-- Ganti nama file gambar sesuai file dari source (link Google Drive) -->
+    <img src="images/alpukatkebelah.jpg" alt="Buah alpukat" class="center">
+
+    <p>
+        Alpukat merupakan jenis buah yang memiliki kandungan <b>lemak tinggi</b>, sekitar 20 kali lebih tinggi
+        dibanding buah-buahan lain. Nama latin tanaman alpukat adalah <i>Persea americana</i>, diyakini berasal dari
+        Amerika Tengah. Buah ini dikenalkan ke Indonesia oleh Hindia Belanda sekitar tahun 1920-1930. Belanda saat itu
+        membawa alpukat ke Indonesia untuk memenuhi kebutuhan lemak masyarakat yang tinggal di pegunungan.
+    </p>
+
+    <img src="images/alpukatbiasa.jpg" alt="Alpukat dibelah" class="center">
+
+    <!-- Khasiat alpukat -->
+    <div class="khasiat">
+        <div class="daftar">
+            <h3>Berikut khasiat buah Alpukat:</h3>
+            <ol>
+                <li><b>Vitamin E</b>, Memiliki anti aging yang bisa mendorong perawatan kulit alami</li>
+                <li><b>Vitamin K</b>, Membantu mencegah terjadinya osteoporosis</li>
+                <li><b>Vitamin B5</b>, Membantu menurunkan tingkat stress, meringankan rasa sakit</li>
+                <li><b>Vitamin B6</b>, Membantu treat diabetes, pendarahan menstruasi, insomnia</li>
+            </ol>
+        </div>
+        <div class="vitamin">
+            <div><h4>1. Vitamin E</h4>Memiliki <b><i>anti aging</i></b> yang bisa mendorong perawatan kulit alami</div>
+            <div><h4>3. Vitamin B5</h4>Membantu <b>menurunkan</b> tingkat stress, meringankan rasa sakit</div>
+            <div><h4>2. Vitamin K</h4>Membantu <b>mencegah</b> terjadinya <i>osteoporosis</i></div>
+            <div><h4>4. Vitamin B6</h4>Membantu <b><i>treat diabetes,</i></b> pendarahan menstruasi, insomnia</div>
+        </div>
+    </div>
+
+    <!-- Tabel harga -->
+    <table class="harga">
+        <tr>
+            <th>No</th>
+            <th>Jenis Alpukat</th>
+            <th>Harga 1 Kg</th>
+            <th>Harga 2 Kg</th>
+            <th>Harga 3 Kg</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Alpukat Mentega</td>
+            <td>Rp.35.000,-</td>
+            <td>Rp.65.000,-</td>
+            <td>Rp.90.000,-</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Alpukat Miki</td>
+            <td>Rp.50.000,-</td>
+            <td>Rp.90.000,-</td>
+            <td>Rp.135.000,-</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Alpukat Aligator</td>
+            <td>Rp.30.000,-</td>
+            <td>Rp.55.000,-</td>
+            <td>Rp.80.000,-</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Alpukat Kendil</td>
+            <td>Rp.40.000,-</td>
+            <td>Rp.75.000,-</td>
+            <td>Rp.100.000,-</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- f. Desain penawaran khusus -->
+    <div class="promo">
+        <div class="foto">
+            <img src="images/alpukat1.jpg" alt="Alpukat 1">
+            <img src="images/alpukat2.jpg" alt="Alpukat 2">
+            <img src="images/alpukat3.jpg" alt="Alpukat 3">
+            <img src="images/alpukat4.jpg" alt="Alpukat 4">
+        </div>
+
+        <h1 class="merah">Anda ingin Buah Alpukat?,<br>Penawaran Khusus Bagi Anda</h1>
+
+        <p>Harga 1 Kg <span class="coret">Rp. 35.000</span></p>
+        <p>Nah sekarang <span class="harga-baru">Rp. 25.000</span> saja</p>
+        <p>Gimana? Tertarik !</p>
+
+        <div class="cod">
+            <p>
+                PEMBAYARAN DI TEMPAT / COD<br>
+                hanya untuk Jakarta, Bekasi dan Depok<br>
+                POTONGAN ONGKIR Rp.5.000,-<br>
+                UNTUK PEMBELIAN VIA TRANSFER
+            </p>
+        </div>
+
+        <button type="button">PESAN SEKARANG</button>
+    </div>
+
+</body>
+</html>
