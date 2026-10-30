@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile - Nama Anda</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #eef1f5; margin: 0; padding: 20px; color: #222; }
+        .page { max-width: 950px; margin: 0 auto; background: #fff; border: 2px solid #333; padding: 20px; }
+
+        /* HEADER: foto + biodata + kategori */
+        header { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+        header .foto img { width: 200px; height: 220px; object-fit: cover; border: 2px solid #333; display: block; }
+        header .biodata { flex: 1; min-width: 260px; }
+        header .biodata h1 { margin: 0 0 10px; font-size: 2rem; }
+        table.bio { border-collapse: collapse; font-size: 0.95rem; }
+        table.bio td { padding: 3px 12px 3px 0; vertical-align: top; }
+        table.bio td:first-child { font-weight: bold; white-space: nowrap; }
+        header nav { text-align: right; min-width: 150px; }
+        header nav h4 { margin: 0 0 6px; text-decoration: underline; }
+        header nav ul { list-style: none; margin: 0; padding: 0; font-size: 0.9rem; }
+        header nav li { margin-bottom: 4px; }
+
+        /* DESKRIPSI DIRI */
+        article { margin: 25px 0; line-height: 1.6; text-align: justify; }
+        article h2 { margin-bottom: 8px; }
+
+        footer { margin-top: 20px; text-align: center; font-size: 0.85rem; color: #555; border-top: 1px solid #ccc; padding-top: 10px; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Header: foto diri, biodata, kategori -->
+    <header>
+        <figure class="foto" style="margin:0;">
+            <!-- Ganti dengan foto diri Anda, mis. images/foto-diri.jpg -->
+            <img src="potoihsan.jpeg" alt="Foto diri">
+        </figure>
+
+        <div class="biodata">
+            <h1>Nama Lengkap Anda</h1>
+            <table class="bio">
+                <tr><td>NIM</td><td>: 0110226183</td></tr>
+                <tr><td>Tempat, Tgl Lahir</td><td>: Depok, 22 Juli 2008</td></tr>
+                <tr><td>Program Studi</td><td>: Teknik Informatika</td></tr>
+                <tr><td>Alamat</td><td>: Jl. Ganggamasetia., depok, Jawa Barat</td></tr>
+                <tr><td>Email</td><td>: <a href="mailto:nama@email.com">mihsanannazhimi@email.com</a></td></tr>
+                <tr><td>Telepon</td><td>: 0858 9034 5377</td></tr>
+                <tr><td>Hobi</td><td>: Ngoding, membaca, main game</td></tr>
+            </table>
+        </div>
+
+        <nav>
+            <h4>Kategori</h4>
+            <ul>
+                <li><a href="#tentang">Tentang Saya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Deskripsi diri (2 paragraf) -->
+    <article id="tentang">
+        <h2>Tentang Saya</h2>
+        <p>
+            Halo, nama saya Muhammad Ihsan Annazhimi, saya mahasiswa semester 1 yang mengerjakan tugas praktikum UI/UX
+        </p>
+        <p>
+            Di luar kuliah, saya senang mengerjakan proyek kecil, dan membaca artikel teknologi,. Saya terbiasa bekerja dalam tim dan terus berlatih
+            agar bisa menjadi pengembang web yang profesional. Ke depan, saya ingin
+            terlibat dalam proyek nyata yang bermanfaat bagi banyak orang.
+        </p>
+    </article>
+
+    <footer>&copy; 2026 Nama Lengkap Anda - Teknik Informatika STT-NF</footer>
+</div>
+</body>
+</html>
