@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 20px; }
+.galeri { display: flex; flex-direction: column; gap: 4px; width: 460px; margin: 0 auto; }
+.baris { display: flex; gap: 0; height: 28px; }
+.item { flex: 1; background: #e0e0e0; border: 3px solid #222; border-radius: 4px; }

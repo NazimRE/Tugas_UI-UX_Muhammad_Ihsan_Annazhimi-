@@ -1,0 +1,9 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 20px; font-family: "Times New Roman", serif; }
+.page { display: flex; width: 380px; height: 150px; margin: 0 auto; }
+nav { width: 60px; background: #ffc0cb; padding: 6px; }
+.kanan { display: flex; flex-direction: column; flex: 1; }
+header, footer { background: #f0e68c; padding: 6px; height: 28px; }
+.tengah { display: flex; flex: 1; }
+article { flex: 1; padding: 6px; background: #fff; }
+aside { width: 65px; padding: 6px; background: #00ffff; }

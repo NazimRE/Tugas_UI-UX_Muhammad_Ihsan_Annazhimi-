@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 20px; font-family: "Times New Roman", serif; }
+.page { display: flex; flex-direction: column; width: 340px; height: 190px; margin: 0 auto; }
+header, footer { background: #f0e68c; padding: 8px; height: 38px; }
+.tengah { display: flex; flex: 1; }
+article { flex: 1; padding: 8px; background: #fff; }
+aside   { width: 68px; padding: 8px; background: #ffc0cb; }
+nav     { width: 68px; padding: 8px; background: #00dbc6; }
