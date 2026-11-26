@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><title>Praktikum JavaScript</title></head>
+<body>
+  <h2>Praktikum Basic JavaScript</h2>
+  <p>Lihat hasil (F12).</p>
+  <script>
+    // Setiap sesi dibungkus dalam blok { } agar nama variabel
+    // (nama, nilai, dll.) tidak bentrok antar sesi.
+
+    // ==========================================================
+    // SESI 2: Output, Variabel, dan Tipe Data
+    // ==========================================================
+    {
+      console.group("SESI 2: Output, Variabel, dan Tipe Data");
+
+      const nama = "Alya";
+      let umur = 19;
+      let nilai = 85;
+      let aktif = true;
+
+      console.log("Nama:", nama);
+      console.log("Umur:", umur);
+      console.log("Nilai:", nilai);
+      console.log("Status aktif:", aktif);
+      console.log("Tipe nilai:", typeof nilai);
+
+      // Latihan modifikasi: tambah const prodi lalu tampilkan
+      const prodi = "Teknik Informatika";
+      console.log("Prodi:", prodi);
+
+      // Untuk latihan, ubah nilai nama/umur/nilai di atas
+      // sesuai data contoh buatan Anda.
+
+      console.groupEnd();
+    }
+
+    // ==========================================================
+    // SESI 3: Operator dan Perhitungan Sederhana
+    // ==========================================================
+    {
+      console.group("SESI 3: Operator dan Perhitungan Sederhana");
+
+      const tugas = 80;
+      const uts = 75;
+      const uas = 90;
+      const akhir = tugas * 0.30 + uts * 0.30 + uas * 0.40;
+
+      console.log("Nilai akhir:", akhir);      // 82.5
+      console.log("Lulus:", akhir >= 60);      // true
+
+      // Latihan modifikasi: UAS = 50
+      const uasBaru = 50;
+      const akhirBaru = tugas * 0.30 + uts * 0.30 + uasBaru * 0.40;
+      console.log("Dengan UAS 50 -> Nilai akhir:", akhirBaru); // 66.5
+      console.log("Dengan UAS 50 -> Lulus:", akhirBaru >= 60);  // true
+
+      // Mencoba operator + - * / %
+      const a = 17;
+      const b = 5;
+      console.log("a + b =", a + b);  // 22
+      console.log("a - b =", a - b);  // 12
+      console.log("a * b =", a * b);  // 85
+      console.log("a / b =", a / b);  // 3.4
+      console.log("a % b =", a % b);  // 2 (sisa bagi)
+
+      console.groupEnd();
+    }
+
+    // ==========================================================
+    // SESI 4: Percabangan if, else if, else
+    // ==========================================================
+    {
+      console.group("SESI 4: Percabangan if, else if, else");
+
+      // Fungsi pembantu agar bisa menguji beberapa nilai sekaligus
+      function tentukanKategori(nilai) {
+        let kategori;
+
+        if (nilai >= 85) {
+          kategori = "A";
+        } else if (nilai >= 70) {
+          kategori = "B";
+        } else if (nilai >= 60) {
+          kategori = "C";
+        } else {
+          kategori = "D";
+        }
+
+        return kategori;
+      }
+
+      // Contoh utama: nilai 78 -> B
+      const nilai = 78;
+      const kategori = tentukanKategori(nilai);
+      console.log("Nilai:", nilai);
+      console.log("Kategori:", kategori);
+
+      // Latihan modifikasi: uji nilai 92, 65, dan 45
+      [92, 65, 45].forEach(function (n) {
+        console.log("Nilai:", n, "-> Kategori:", tentukanKategori(n));
+      });
+
+      // Penjelasan: kondisi dicek dari atas ke bawah dan berhenti di
+      // kondisi pertama yang bernilai true.
+      //   92 >= 85       -> A
+      //   65 (>= 60 saja) -> C
+      //   45 (tidak memenuhi semua kondisi) -> masuk else -> D
+      // Hasilnya berbeda karena tiap nilai memenuhi batas (threshold) berbeda.
+
+      console.groupEnd();
+    }
+
+    // ==========================================================
+    // SESI 5: Perulangan dan Fungsi Dasar
+    // ==========================================================
+    {
+      console.group("SESI 5: Perulangan dan Fungsi Dasar");
+
+      function hitungDiskon(harga, persen) {
+        return harga - (harga * persen / 100);
+      }
+
+      for (let i = 1; i <= 3; i++) {
+        const harga = i * 10000;
+        const bayar = hitungDiskon(harga, 10);
+        console.log("Barang", i, "Harga:", harga, "Bayar:", bayar);
+      }
+      // Hasil: 10000 -> 9000, 20000 -> 18000, 30000 -> 27000
+
+      console.groupEnd();
+    }
+
+    // ==========================================================
+    // D. PRAKTIKUM MANDIRI: Pengolah Nilai Mahasiswa
+    // Rumus: Tugas 30% + UTS 30% + UAS 40%
+    // LULUS jika nilai akhir >= 60, selain itu TIDAK LULUS
+    // ==========================================================
+    {
+      console.group("PRAKTIKUM MANDIRI: Pengolah Nilai Mahasiswa");
+
+      function prosesNilaiMahasiswa(namaMahasiswa, nilaiTugas, nilaiUTS, nilaiUAS) {
+        const nilaiAkhir = nilaiTugas * 0.30 + nilaiUTS * 0.30 + nilaiUAS * 0.40;
+
+        let status;
+        if (nilaiAkhir >= 60) {
+          status = "LULUS";
+        } else {
+          status = "TIDAK LULUS";
+        }
+
+        console.log("Nama mahasiswa:", namaMahasiswa);
+        console.log("Nilai akhir:", nilaiAkhir);
+        console.log("Status kelulusan:", status);
+      }
+
+      // Contoh pengujian dari soal: Tugas 80, UTS 70, UAS 90 -> 81 -> LULUS
+      prosesNilaiMahasiswa("Alya", 80, 70, 90);
+
+      // Pengujian tambahan: kasus TIDAK LULUS (nilai akhir 49)
+      prosesNilaiMahasiswa("Budi", 50, 40, 55);
+
+      console.groupEnd();
+    }
+  </script>
+</body>
+</html>
